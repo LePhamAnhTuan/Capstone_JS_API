@@ -11,6 +11,13 @@ header {
   right: 0;
   z-index: 1;
   background: #6a6a6a;
+  .dropdown-menu {
+    li {
+      a {
+        color: #000;
+      }
+    }
+  }
   img {
     height: 60px;
   }
