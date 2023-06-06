@@ -55,7 +55,7 @@ header {
 .banner {
   position: relative;
   background: url(../img/banner7-12.jpg) center no-repeat;
-  background-size: cover;
+  background-size: contain;
   height: 100vh;
   .content_title {
     position: absolute;
@@ -316,5 +316,72 @@ footer {
   to {
     transform: translateY(40px);
     opacity: 0;
+  }
+}
+//reponsive
+
+//tablet
+@media only screen and (min-width: 765px) and (max-width: 1023px) {
+  body {
+    background-color: #11876b;
+    .banner {
+      background-size: contain;
+      .title {
+        font-size: 20px;
+      }
+      .title_main {
+        font-size: 40px;
+      }
+      .subtitle {
+        font-size: 20px;
+      }
+      button {
+        font-size: 10px;
+      }
+    }
+    .product {
+      .row_product {
+        grid-template-columns: auto auto;
+      }
+    }
+  }
+}
+
+//phone
+@media only screen and (max-width: 764px) {
+  body {
+    background-color: #b0ff4b;
+    .banner {
+      background-size: contain;
+      .title {
+        font-size: 20px;
+      }
+      .title_main {
+        font-size: 40px;
+      }
+      .subtitle {
+        font-size: 20px;
+      }
+      button {
+        font-size: 10px;
+      }
+    }
+    .colection {
+      .row {
+        display: grid;
+        grid-template-columns: auto;
+      }
+    }
+    .product {
+      .row_product {
+        grid-template-columns: auto;
+        .col_item {
+          text-align: center;
+          .btn_product {
+            justify-content: center;
+          }
+        }
+      }
+    }
   }
 }
