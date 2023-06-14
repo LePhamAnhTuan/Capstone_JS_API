@@ -49,16 +49,22 @@ header .nav-item a:hover::before {
   width: 100%;
   transition: all 1s;
 }
+header .login_bg {
+  border: none;
+  background-color: #6a6a6a;
+  margin-right: 10px;
+  color: white;
+}
 
 .banner {
   position: relative;
-  background: url(../img/banner7-12.jpg) center no-repeat;
-  background-size: contain;
+  background: url(../img/banner7-12.jpg) top center no-repeat;
+  background-size: cover;
   height: 100vh;
 }
 .banner .content_title {
   position: absolute;
-  top: 30%;
+  top: 20%;
   left: 20%;
 }
 .banner .title {
@@ -114,7 +120,7 @@ header .nav-item a:hover::before {
   transform: scale(1.05);
 }
 .colection .item1 {
-  grid-row: 1/span 2;
+  grid-row: 1 / span 2;
 }
 
 .product .product_title {
@@ -237,10 +243,15 @@ footer .footer_bg .footer_content .footer_content_title::after {
   font-weight: 600;
   color: green;
 }
-.main_pro .pro_bg .pro_content .size-container input[type=radio] {
+.main_pro .pro_bg .pro_content .size-container input[type="radio"] {
   display: none;
 }
-.main_pro .pro_bg .pro_content .size-container input[type=radio]:checked + label {
+.main_pro
+  .pro_bg
+  .pro_content
+  .size-container
+  input[type="radio"]:checked
+  + label {
   background: rgba(128, 128, 128, 0.223);
   border: aqua solid 2px;
 }
@@ -272,13 +283,127 @@ footer .footer_bg .footer_content .footer_content_title::after {
   display: flex;
   align-items: center;
 }
-.main_pro .pro_bg .pro_content .quantity-container .quantity-input input[type=number] {
+.main_pro
+  .pro_bg
+  .pro_content
+  .quantity-container
+  .quantity-input
+  input[type="number"] {
   width: 50px;
   padding: 8px;
   font-size: 16px;
   border-radius: 4px;
   border: 1px solid #ccc;
   text-align: center;
+}
+
+#myModal {
+  display: none;
+}
+
+.modal {
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  color: white;
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+.modal .main {
+  height: 87%;
+  display: flex;
+  justify-content: center;
+  margin-top: 76px;
+}
+.modal .main .form {
+  width: 360px;
+  height: 100%;
+  padding: 0px 24px;
+  text-align: center;
+  background: #fff;
+  border-radius: 2px;
+  position: relative;
+  align-self: center;
+  box-shadow: 0 2px 5px 0 rgba(51, 62, 73, 0.1);
+}
+.modal .main .form .btn_close {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  border: none;
+  background: #fff;
+}
+.modal .main .form .heading {
+  color: #000;
+  font-size: 20px;
+  margin-top: 20px;
+}
+.modal .main .form .desc {
+  text-align: center;
+  color: #000;
+  font-size: 16px;
+  line-height: 20px;
+  margin-top: 16px;
+  font-weight: 300;
+}
+.modal .main .form .form-group {
+  display: flex;
+  margin-bottom: 16px;
+  flex-direction: column;
+  color: #000;
+}
+.modal .main .form .form-label,
+.modal .main .form .form-message {
+  text-align: left;
+}
+.modal .main .form .form-label {
+  font-weight: 700;
+  padding-bottom: 6px;
+  line-height: 16px;
+  font-size: 16px;
+}
+.modal .main .form .form-control {
+  height: 40px;
+  padding: 8px 12px;
+  border: 1px solid #b3b3b3;
+  border-radius: 3px;
+  outline: none;
+  font-size: 16px;
+}
+.modal .main .form .form-control:hover {
+  border-color: #1dbfaf;
+}
+.modal .main .form .form-group.invalid .form-control {
+  border-color: #f33a58;
+}
+.modal .main .form .form-group.invalid .form-message {
+  color: #f33a58;
+}
+.modal .main .form .form-message {
+  font-size: 16px;
+  line-height: 16px;
+  padding: 4px 0 0;
+}
+.modal .main .form .form-submit {
+  outline: none;
+  background-color: #1dbfaf;
+  padding: 12px 16px;
+  font-weight: 600;
+  color: #fff;
+  border: none;
+  width: 100%;
+  font-size: 14px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.modal .main .form .form-submit:hover {
+  background-color: #1ac7b6;
+}
+.modal .main .form .spacer {
+  margin-top: 0px;
 }
 
 @keyframes worldJum {
@@ -302,7 +427,7 @@ footer .footer_bg .footer_content .footer_content_title::after {
 }
 @media only screen and (min-width: 765px) and (max-width: 1023px) {
   body {
-    background-color: #11876b;
+    /* background-color: #11876b; */
   }
   body .banner {
     background-size: contain;
@@ -325,7 +450,7 @@ footer .footer_bg .footer_content .footer_content_title::after {
 }
 @media only screen and (max-width: 764px) {
   body {
-    background-color: #b0ff4b;
+    /* background-color: #b0ff4b; */
   }
   body .banner {
     background-size: contain;
@@ -355,4 +480,4 @@ footer .footer_bg .footer_content .footer_content_title::after {
   body .product .row_product .col_item .btn_product {
     justify-content: center;
   }
-}/*# sourceMappingURL=style.css.map */
+} /*# sourceMappingURL=style.css.map */
