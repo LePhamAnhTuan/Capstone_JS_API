@@ -91,8 +91,11 @@
                   <a class="nav-link" href="#">New Post</a>
                 </li>
               </ul>
-              <button id="btn-openModal" class="login_bg">
+              <button id="btn-openModal-1" class="login_bg">
                 <i class="fa-solid fa-user"></i><span> Đăng Nhập</span>
+              </button>
+              <button id="btn-openModal" class="login_bg">
+                <span> Đăng Ký</span>
               </button>
               <form class="d-flex" role="search">
                 <input
@@ -199,7 +202,7 @@
         </div>
       </div>
     </footer>
-    <!-- <-----Modal---->
+    <!-- <-----Modal Đăng kí---->
     <div id="myModal" class="modal">
       <div class="main">
         <form action="" method="POST" class="form" id="form-1">
@@ -211,7 +214,7 @@
 
           <div class="spacer"></div>
 
-          <div class="form-group">
+          <div class="form_group">
             <label for="fullname" class="form-label">Tên đầy đủ</label>
             <input
               id="fullname"
@@ -224,7 +227,20 @@
             <span class="form-message"></span>
           </div>
 
-          <div class="form-group">
+          <div class="form_group">
+            <label for="soDienThoai" class="form-label">Số điện thoại</label>
+            <input
+              id="soDienThoai"
+              name="soDienThoai"
+              type="text"
+              placeholder=""
+              class="form-control"
+              rules="required|numberPhone"
+            />
+            <span class="form-message"></span>
+          </div>
+
+          <div class="form_group">
             <label for="email" class="form-label">Email</label>
             <input
               id="email"
@@ -237,7 +253,7 @@
             <span class="form-message"></span>
           </div>
 
-          <div class="form-group">
+          <div class="form_group">
             <label for="password" class="form-label">Mật khẩu</label>
             <input
               id="password"
@@ -250,7 +266,7 @@
             <span class="form-message"></span>
           </div>
 
-          <div class="form-group">
+          <div class="form_group">
             <label for="password_confirmation" class="form-label"
               >Nhập lại mật khẩu</label
             >
@@ -264,8 +280,60 @@
             />
             <span class="form-message"></span>
           </div>
+          <div class="form_group">
+            <div class="form_gender">
+              <label for="male" class="form-label">Nam</label>
+              <input type="radio" name="gender" id="male" value="true" />
+            </div>
+            <div class="form_gender">
+              <label for="female" class="form-label me-3">Nữ</label>
+              <input type="radio" name="gender" id="female" value="false" />
+            </div>
+            <span class="form-message"></span>
+          </div>
 
           <button class="form-submit">Đăng ký</button>
+        </form>
+      </div>
+    </div>
+    <!-- <----Modal Đăng Nhập--->
+    <div id="myModal-1" class="modal">
+      <div class="main">
+        <form action="" method="POST" class="form" id="form-2">
+          <button id="btnClose-1" class="btn_close">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+          <h3 class="heading">Đăng Nhập</h3>
+          <p class="desc"></p>
+
+          <div class="spacer"></div>
+
+          <div class="form_group">
+            <label for="fullname" class="form-label">Email Đăng Nhập</label>
+            <input
+              id="dangNhap"
+              name="email"
+              type="text"
+              placeholder=""
+              class="form-control"
+              rules="required|email"
+            />
+            <span class="form-message"></span>
+          </div>
+
+          <div class="form_group">
+            <label for="password" class="form-label">Mật khẩu</label>
+            <input
+              id="mkDangNhap"
+              name="password"
+              type="password"
+              placeholder=""
+              class="form-control"
+              rules="required|min:6|password"
+            />
+            <span class="form-message"></span>
+          </div>
+          <button class="form-submit">Đăng Nhập</button>
         </form>
       </div>
     </div>
@@ -291,6 +359,7 @@
     ></script>
     <script src="./js/modal.js"></script>
     <script src="./js/validator.js"></script>
+    <script src="./js/validator1.js"></script>
     <script src="./js/index.js"></script>
   </body>
 </html>

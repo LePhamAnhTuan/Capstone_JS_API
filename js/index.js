@@ -29,7 +29,7 @@ function getData() {
       </p>
       <div class="btn_product">
                   <p>${item.price}$</p>
-                  <button onclick="layIdSanPham(${item.id})"><a href="https://capstone-js-api-sigma.vercel.app?${item.id}">Buy Now</a></button>
+                  <button onclick="layIdSanPham(${item.id})"><a href="/product.html?${item.id}">Buy Now</a></button>
                 </div>
         </div>
         `;

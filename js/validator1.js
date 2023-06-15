@@ -1,27 +1,22 @@
-var from = new Validator("#form-1");
+var from = new Validator("#form-2");
 from.onSubmit = function (data) {
   console.log("data: ", data);
   var promise = axios({
-    url: "https://shop.cyberlearn.vn/api/Users/signup",
+    url: "https://shop.cyberlearn.vn/api/Users/signin",
     method: "POST",
     ResponseType: "JSON",
     data: {
       email: data.email,
       password: data.password,
-      name: data.fullname,
-      gender: data.gender,
-      phone: data.soDienThoai,
     },
   });
   promise.then(function (result) {
     console.log("result: ", result.data.content);
     console.log("result: ", result.data.message);
     if (result) {
-      document.getElementById("fullname").value = "";
-      document.getElementById("soDienThoai").value = "";
-      document.getElementById("email").value = "";
-      document.getElementById("password").value = "";
-      document.getElementById("password_confirmation").value = "";
+      document.getElementById("dangNhap").value = "";
+      document.getElementById("mkDangNhap").value = "";
+      alert("Đăng nhập thành công !!!");
     }
   });
   promise.catch(function (error) {

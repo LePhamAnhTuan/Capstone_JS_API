@@ -300,6 +300,9 @@ footer .footer_bg .footer_content .footer_content_title::after {
 #myModal {
   display: none;
 }
+#myModal-1 {
+  display: none;
+}
 
 .modal {
   position: fixed; /* Stay in place */
@@ -313,10 +316,11 @@ footer .footer_bg .footer_content .footer_content_title::after {
   background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
 }
 .modal .main {
-  height: 87%;
+  height: 680px;
   display: flex;
   justify-content: center;
-  margin-top: 76px;
+  margin-top: 10px;
+  z-index: 1;
 }
 .modal .main .form {
   width: 360px;
@@ -349,11 +353,21 @@ footer .footer_bg .footer_content .footer_content_title::after {
   margin-top: 16px;
   font-weight: 300;
 }
-.modal .main .form .form-group {
+.modal .main .form .form_group {
   display: flex;
-  margin-bottom: 16px;
+  margin-bottom: 8px;
   flex-direction: column;
   color: #000;
+}
+.modal .main .form .form_gender {
+  display: flex;
+  align-items: center;
+}
+.modal .main .form .form_gender label {
+  padding-bottom: 0px;
+  line-height: 100%;
+  margin: 0;
+  padding-right: 10px;
 }
 .modal .main .form .form-label,
 .modal .main .form .form-message {
@@ -376,10 +390,10 @@ footer .footer_bg .footer_content .footer_content_title::after {
 .modal .main .form .form-control:hover {
   border-color: #1dbfaf;
 }
-.modal .main .form .form-group.invalid .form-control {
+.modal .main .form .form_group.invalid .form-control {
   border-color: #f33a58;
 }
-.modal .main .form .form-group.invalid .form-message {
+.modal .main .form .form_group.invalid .form-message {
   color: #f33a58;
 }
 .modal .main .form .form-message {
